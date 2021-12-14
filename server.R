@@ -6,7 +6,7 @@ model <- readRDS("knnmodel.rds")
 df <- read.csv("occupancy.csv", header = TRUE)
 
 shinyServer(function(input, output, session) {
-  # Input Data
+  # Recieve the input Data
   datasetInput <- reactive({
     df <- data.frame(
       Name = c(
@@ -42,15 +42,12 @@ shinyServer(function(input, output, session) {
       col.names = FALSE
     )
     
+    #read the test data entered but the user
     test <- read.csv(paste("input", ".csv", sep = ""), header = TRUE)
     
+   
     
-    # range01 <- function(x) {
-    #   (x - min(x)) / (max(x) - min(x))
-    # }
-    # test[,1:5] <- range01(test[,1:5])
-    #
-    
+    #make prediction using the data from the user
     test$Period <-
       factor(test$Period,
              levels = c("daytime", "eveningtime", "lateevening", "earlydaytime"))
@@ -63,6 +60,7 @@ shinyServer(function(input, output, session) {
     
     
   })
+  
   
   
   output$distPlot <- renderPlot({
@@ -82,6 +80,7 @@ shinyServer(function(input, output, session) {
   })
   
   
+  #plot for the pie chart
   output$piePlot <- renderPlot({
     ggplot(df, aes(x = 1, fill = Period)) +
       geom_bar(
@@ -125,8 +124,9 @@ shinyServer(function(input, output, session) {
     
   })
   
+  #plot the model for knn
   output$knnplot <- renderPlot({
-    #plot the model
+    
     
     if (input$submitbutton > 0) {
       plot(model)
@@ -147,6 +147,7 @@ shinyServer(function(input, output, session) {
     }
   })
   
+  #output of the model
   output$explain <- renderText({
     if (input$submitbutton > 0) {
       HTML(
@@ -181,7 +182,7 @@ shinyServer(function(input, output, session) {
     paste(" ")
   })
   
-  
+  #get the image to the user interface
     output$img <- renderUI({
       tags$img(src = "https://i.ibb.co/TbDNmBR/modd.png")
     })
