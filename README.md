@@ -2,8 +2,9 @@
 
 This is a model predictive control for optimizing the performance of heating, ventilation and airconditioning system. For simulation purpose, this app is deployed on heroku and the steps taken to do that is outlined as follows:
 
-1. Create a github account if you don't have one, then Fork or clone this repository as your own
-2. Create an [Heroku account](https://www.heroku.com/)
+1. Create a github account if you don't have one
+2. After creating, follow the steps provided to push this repository. Otherwise, you can fork it from this [link](https://github.com/SamsonOso/detecting-occupancy.git) 
+3. Create an [Heroku account](https://www.heroku.com/)
       1. Click this link: [new app ](https://dashboard.heroku.com/apps) and create a new app (Only choose app name and region(EU) and click create app as shown in screenshot below) 
       ![alt text](https://i.ibb.co/SmgCv1y/newapp.png)
       
