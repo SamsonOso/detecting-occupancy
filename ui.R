@@ -1,6 +1,7 @@
 library(shiny)
 library(shinythemes)
 library(shinyWidgets)
+
 # Read the dataset set
 df <- read.csv("occupancy.csv", header = TRUE)
 
@@ -11,23 +12,25 @@ ui <- fluidPage(
   theme = shinytheme("cerulean"),
   setBackgroundImage(src = "https://i.ibb.co/z8WR9q9/Untitled-design.png"),
   
+  #set the navigation bar
   navbarPage(
-    # theme = "cerulean",  # <--- To use a theme,
     "Building Occupancy Detection",
     tabPanel("Home", style = "color:#4D4D3D; font-size:18px",
-             fluidRow(column(
-               8,
-               align = "center",
-               offset = 2,
-               HTML(
-                 "
+             fluidRow(
+               column(
+                 8,
+                 align = "center",
+                 offset = 2,
+                 HTML(
+                   "
 
-        <section class='banner'>
-        <h2 class='parallax'>Occupancy prediction using sensor data</h2>
-        </section>
-          "
+                  <section class='banner'>
+                  <h2 class='parallax'>Occupancy prediction using sensor data</h2>
+                  </section>
+                  "
+                 )
                )
-             )), 
+             ),
              
              fluidRow(
                column(
@@ -37,14 +40,14 @@ ui <- fluidPage(
                  HTML(
                    "
 
-        <section class='banner'>
-        <p class='parallax_description'>
-        
-        
-        
-        </p>
-        </section>
-          "
+                  <section class='banner'>
+                  <p class='parallax_description'>
+          
+          
+          
+                  </p>
+                  </section>
+                   "
                  ),
                  tags$head(
                    tags$style(
@@ -53,29 +56,32 @@ ui <- fluidPage(
                    )
                  ),
                  uiOutput("img"),
-                 tags$label(style = "background-color:#F0F0EB; border-radius: 15px;width: 80%; padding: 30px; margin:20px; text-align: justify;",HTML(
-                   "
+                 tags$label(
+                   style = "background-color:#F0F0EB; border-radius: 15px;width: 80%; padding: 30px; margin:20px; text-align: justify;",
+                   HTML(
+                     "
 
                     <section class='banner' >
                     <p class='parallax_description' >
-                      A heating, ventilation, and air conditioning system is an integral part of most commercial buildings with many office and communal spaces. 
-                      Augmenting this system with sensors and machine learning predictive models will have a tremendous impact on its efficiency. 
-                      As building energy demand significantly contributes to energy concerns, this improvement in managing energy is pivotal in meeting goals set by energy policy makers. 
+                      A heating, ventilation, and air conditioning system is an integral part of most commercial buildings with many office and communal spaces.
+                      Augmenting this system with sensors and machine learning predictive models will have a tremendous impact on its efficiency.
+                      As building energy demand significantly contributes to energy concerns, this improvement in managing energy is pivotal in meeting goals set by energy policy makers.
                     </p>
-                    
+
                      <p class='parallax_description' >
                       Considering the diagram in figure 1, the data is preprocessed, fed into a model predictive system and the output is used in controling HVAC systems.
-                      The aim of this application is for the simulation of the sensor values that take records of attributes such as temperature, light, humidity and CO2 and datetime. 
+                      The aim of this application is for the simulation of the sensor values that take records of attributes such as temperature, light, humidity and CO2 and datetime.
                       The focus is on the model predictive segment.
-                      By using the sliders in the Occpancy Prediction tab, of the app, the values of the sensor can be selected and 
+                      By using the sliders in the Occpancy Prediction tab, of the app, the values of the sensor can be selected and
                       the machine learning model will use those values to predict the occupancy status of the office.
                     </p>
                     <p class='parallax_description' >
-                      In the Data exploration tab, some of the attributes used in training the model can also be visualized, the correlation or relationships between them is also explored. 
+                      In the Data exploration tab, some of the attributes used in training the model can also be visualized, the correlation or relationships between them is also explored.
                     </p>
                     </section>
                   "
-                 )),
+                   )
+                 ),
                  
                  
                )
@@ -148,6 +154,7 @@ ui <- fluidPage(
       ) # mainPanel
       
     ),
+    
     # Navbar 1, tabPanel
     tabPanel(
       "Data Exploration",
@@ -192,9 +199,12 @@ ui <- fluidPage(
       ),
       
       # Main panel for displaying outputs ----
-      mainPanel(# Output: Histogram ----
-                plotOutput(outputId = "daytime"), style = 'background-color:white;
-                     margin-bottom: 10px; background-color:#F0F0EB; border-radius: 15px; padding: 16px;'),
+      mainPanel(
+        # Output: Histogram ----
+        plotOutput(outputId = "daytime"),
+        style = 'background-color:white;
+                     margin-bottom: 10px; background-color:#F0F0EB; border-radius: 15px; padding: 16px;'
+      ),
       sidebarPanel(
         "The correllation plot, is used to show the relationship between the data variables.
                     The Light has a strong positive correlation with Occupancy class variable, followed by temperature and CO2.
@@ -204,11 +214,14 @@ ui <- fluidPage(
       ),
       
       # Main panel for displaying outputs ----
-      mainPanel(# Output: Histogram ----
-                plotOutput(outputId = "corr"), style = 'background-color:white;
-                      margin-bottom: 55px; background-color:#F0F0EB; border-radius: 15px; padding: 16px;')
+      mainPanel(
+        # Output: Histogram ----
+        plotOutput(outputId = "corr"),
+        style = 'background-color:white;
+                      margin-bottom: 55px; background-color:#F0F0EB; border-radius: 15px; padding: 16px;'
+      )
     )#,
-    #tabPanel("Navbar 3", "This panel is intentionally left blank")
+    
     
   ),
   # navbarPage
@@ -232,4 +245,4 @@ ui <- fluidPage(
   ),
   textOutput("keepAlive")
   
-) # fluidPage
+) 
