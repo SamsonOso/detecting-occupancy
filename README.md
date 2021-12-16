@@ -1,7 +1,7 @@
 ### Occupancy prediction using sensor data 
 #### Link to already deployed app: [occupancy prediction](https://buidingdetect.herokuapp.com/)
 
-This is a model predictive control for optimizing the performance of heating, ventilation and airconditioning system. For simulation purpose, this app is deployed on heroku and the steps taken to do that is outlined as follows:
+This is a model predictive control for occupancy detection optimizing the performance of heating, ventilation and airconditioning system. For simulation purpose, this app is deployed on heroku. Follow the steps to deploy the app outlined as follows:
 
 1. Create a Github account if you don't have one.
 2. After creating, follow the steps provided to push this repository. Otherwise, you can fork it from this [link](https://github.com/SamsonOso/detecting-occupancy.git).
