@@ -14,12 +14,17 @@ This is a model predictive control for optimizing the performance of heating, ve
       
             a. In the textbox, copy and paste this link: https://github.com/virtualstaticvoid/heroku-buildpack-r.git
             b. Click on Save changes
+      
       iii. Navigate to the Deploy tab
+      
             a. For Deployment method, select and connect to Github, search for the name of repository(detecting-occupancy
 ) cloned in step 1,
                   Click Connect, to add the repository
+                  
             b. Scroll down to Manual deploy at the bottom
+            
                   1. Select the main branch and click Deploy Branch
                   2. Wait for a while for deployment to complete
+
 4. As shown in sample screenshot below, when Deployment is complete, click on the View button to see deployed app
 ![alt text](https://i.ibb.co/9yTBdxK/complete.png)
