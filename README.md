@@ -17,9 +17,7 @@ This is a model predictive control for optimizing the performance of heating, ve
       
       iii. Navigate to the Deploy tab
       
-            a. For Deployment method, select and connect to Github, search for the name of repository(detecting-occupancy
-) cloned in step 1,
-                  Click Connect, to add the repository
+            a. For Deployment method, select and Connect to Github, search for the name of repository(detecting-occupancy) cloned in step 1 and Click Connect, to add the repository
                   
             b. Scroll down to Manual deploy at the bottom
             
