@@ -7,7 +7,8 @@ This is a model predictive control for occupancy detection optimizing the perfor
 2. After creating, follow the steps provided to push this repository. Otherwise, you can fork it from this [link](https://github.com/SamsonOso/detecting-occupancy.git).
 3. Create an [Heroku account](https://www.heroku.com/) and log in
 
-      i. Click this link: [new app ](https://dashboard.heroku.com/apps) and create a new app (Only type the name for the app in App name and choose region (Europe) then click Create app as shown in screenshot below: 
+      i. Click this link: [new app ](https://dashboard.heroku.com/apps) and create a new app 
+      (Only type the name for the app in App name and choose region (Europe) then click Create app as shown in screenshot below: 
       ![alt text](https://i.ibb.co/SmgCv1y/newapp.png)
       
       ii. After creating the app, navigate to the Settings tab. Scroll down and Click on Add Buildpack. 
@@ -17,7 +18,8 @@ This is a model predictive control for occupancy detection optimizing the perfor
       
       iii. Navigate to the Deploy tab
       
-            a. For Deployment method, select and Connect to Github, search for the name of repository(detecting-occupancy) cloned in step 1 and Click Connect, to add the repository
+            a. For Deployment method, select and Connect to Github, search for the name of repository(detecting-occupancy) 
+            cloned in step 1 and Click Connect, to add the repository
                   
             b. Scroll down to Manual deploy at the bottom
             
