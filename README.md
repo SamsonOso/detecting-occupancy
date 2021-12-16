@@ -7,7 +7,7 @@ This is a model predictive control for optimizing the performance of heating, ve
 2. After creating, follow the steps provided to push this repository. Otherwise, you can fork it from this [link](https://github.com/SamsonOso/detecting-occupancy.git).
 3. Create an [Heroku account](https://www.heroku.com/) and log in
 
-      i. Click this link: [new app ](https://dashboard.heroku.com/apps) and create a new app (Only type the app name and choose region (Europe) and click Create app as shown in screenshot below) 
+      i. Click this link: [new app ](https://dashboard.heroku.com/apps) and create a new app (Only type the name for the app in App name and choose region (Europe) then click Create app as shown in screenshot below) 
       ![alt text](https://i.ibb.co/SmgCv1y/newapp.png)
       
       ii. After creating the app, navigate to the Settings tab. Scroll down and Click on Add Buildpack. 
