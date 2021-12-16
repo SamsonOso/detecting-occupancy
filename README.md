@@ -24,5 +24,6 @@ This is a model predictive control for optimizing the performance of heating, ve
                   1. Select the main branch and click Deploy Branch
                   2. Wait for a while for deployment to complete
 
-4. Once deployment is complated, the sample screenshot below will be displayed. Click on the View button to see deployed app and begin to use it.
+4. Once deployment is completed, the sample screenshot below will be displayed. Click on the View button to see deployed app and begin to use it.
+
 ![alt text](https://i.ibb.co/9yTBdxK/complete.png)
